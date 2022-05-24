@@ -1,0 +1,6 @@
+framework module Pods_Ticcket {
+  umbrella header "Pods-Ticcket-umbrella.h"
+
+  export *
+  module * { export * }
+}
