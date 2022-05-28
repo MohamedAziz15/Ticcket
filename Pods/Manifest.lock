@@ -4,6 +4,10 @@ PODS:
   - Kingfisher (7.1.2)
   - MercariQRScanner (1.9.0)
   - ObjectMapper (4.2.0)
+  - SwiftMessages (9.0.6):
+    - SwiftMessages/App (= 9.0.6)
+  - SwiftMessages/App (9.0.6)
+  - SwiftQRScanner (0.1.0)
 
 DEPENDENCIES:
   - Alamofire
@@ -11,6 +15,8 @@ DEPENDENCIES:
   - Kingfisher
   - MercariQRScanner
   - ObjectMapper
+  - SwiftMessages
+  - SwiftQRScanner
 
 SPEC REPOS:
   trunk:
@@ -19,6 +25,8 @@ SPEC REPOS:
     - Kingfisher
     - MercariQRScanner
     - ObjectMapper
+    - SwiftMessages
+    - SwiftQRScanner
 
 SPEC CHECKSUMS:
   Alamofire: 1c4fb5369c3fe93d2857c780d8bbe09f06f97e7c
@@ -26,7 +34,9 @@ SPEC CHECKSUMS:
   Kingfisher: 44ed6a8504763f27bab46163adfac83f5deb240c
   MercariQRScanner: e5aea873969af59b09b4cc411fc1c5b6293dba44
   ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
+  SwiftMessages: f0c7ef4705a570ad6c5e208b611f4333e660ed92
+  SwiftQRScanner: fba218bce4e5ac5de8ab6b72c6c7fefa09d29c5b
 
-PODFILE CHECKSUM: 52c3898b62c7cb533195a6ec6951a2813bb584b5
+PODFILE CHECKSUM: b8d1b75d08f309effc9d79f94f2be828bdaa1b23
 
 COCOAPODS: 1.11.2

@@ -13,5 +13,7 @@ target 'Ticcket' do
   pod 'Alamofire'
   pod 'Kingfisher'
   pod 'ObjectMapper'
+  pod 'SwiftMessages'
+  pod 'SwiftQRScanner'
 
 end

@@ -13,6 +13,8 @@
 		8F5C286D28220EF2007B1F7B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F5C286B28220EF2007B1F7B /* Main.storyboard */; };
 		8F5C286F28220EF3007B1F7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F5C286E28220EF3007B1F7B /* Assets.xcassets */; };
 		8F5C287228220EF3007B1F7B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F5C287028220EF3007B1F7B /* LaunchScreen.storyboard */; };
+		8F86496F284181B80074E3BC /* ScanQRVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F86496E284181B80074E3BC /* ScanQRVC.swift */; };
+		8F8649712841945F0074E3BC /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8649702841945F0074E3BC /* ScanViewController.swift */; };
 		8FB042822828AE890076DB99 /* Event.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FB042812828AE890076DB99 /* Event.storyboard */; };
 		8FB042862828B20A0076DB99 /* createEventVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB042852828B20A0076DB99 /* createEventVC.swift */; };
 		8FB042882828B4EB0076DB99 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB042872828B4EB0076DB99 /* HomeVC.swift */; };
@@ -23,8 +25,22 @@
 		8FBA414328318EA20053ABA3 /* eventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBA414228318EA20053ABA3 /* eventTableViewCell.swift */; };
 		8FBA4145283195E00053ABA3 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBA4144283195E00053ABA3 /* TableViewCell.swift */; };
 		8FBC34A22838FCA20065A124 /* QRCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBC34A12838FCA20065A124 /* QRCodeVC.swift */; };
+		8FBE31172840F22B00B8FEC9 /* HomeErrorsBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBE31152840F22B00B8FEC9 /* HomeErrorsBase.swift */; };
+		8FBE31182840F22B00B8FEC9 /* HomeErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBE31162840F22B00B8FEC9 /* HomeErrors.swift */; };
+		8FC014A82840EE4E0023174C /* HomeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC014A52840EE4E0023174C /* HomeData.swift */; };
+		8FC014A92840EE4E0023174C /* HomeLinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC014A62840EE4E0023174C /* HomeLinks.swift */; };
+		8FC014AA2840EE4E0023174C /* HomeBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC014A72840EE4E0023174C /* HomeBase.swift */; };
+		8FC1735B28412B7A006C6F19 /* eventHomeBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC1735928412B7A006C6F19 /* eventHomeBase.swift */; };
+		8FC1735C28412B7A006C6F19 /* eventData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC1735A28412B7A006C6F19 /* eventData.swift */; };
+		8FC89AF02841ACA10044C854 /* createBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC89AEE2841ACA10044C854 /* createBase.swift */; };
+		8FC89AF12841ACA10044C854 /* createData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC89AEF2841ACA10044C854 /* createData.swift */; };
 		8FD0E62028380E8100206FD0 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD0E61F28380E8100206FD0 /* HomeTableViewController.swift */; };
 		8FD6ECEE28330255004B96D9 /* eventVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD6ECED28330255004B96D9 /* eventVC.swift */; };
+		8FE205CC2840BEA400393900 /* signUpBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE205CA2840BEA400393900 /* signUpBase.swift */; };
+		8FE205CD2840BEA400393900 /* signUpData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE205CB2840BEA400393900 /* signUpData.swift */; };
+		8FE205D02840C09D00393900 /* signUpErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE205CE2840C09D00393900 /* signUpErrors.swift */; };
+		8FE205D12840C09D00393900 /* errorSignUpBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE205CF2840C09D00393900 /* errorSignUpBase.swift */; };
+		8FEA865C2840D6420087B28F /* homeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FEA865B2840D6420087B28F /* homeTableViewCell.swift */; };
 		CFB6B7D093A61835E6C107B7 /* Pods_Ticcket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43D45AC702E286C7A7FD9C42 /* Pods_Ticcket.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +56,8 @@
 		8F5C286E28220EF3007B1F7B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8F5C287128220EF3007B1F7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8F5C287328220EF3007B1F7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F86496E284181B80074E3BC /* ScanQRVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanQRVC.swift; sourceTree = "<group>"; };
+		8F8649702841945F0074E3BC /* ScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
 		8FB042812828AE890076DB99 /* Event.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Event.storyboard; sourceTree = "<group>"; };
 		8FB042852828B20A0076DB99 /* createEventVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = createEventVC.swift; sourceTree = "<group>"; };
 		8FB042872828B4EB0076DB99 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
@@ -50,8 +68,22 @@
 		8FBA414228318EA20053ABA3 /* eventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eventTableViewCell.swift; sourceTree = "<group>"; };
 		8FBA4144283195E00053ABA3 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		8FBC34A12838FCA20065A124 /* QRCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeVC.swift; sourceTree = "<group>"; };
+		8FBE31152840F22B00B8FEC9 /* HomeErrorsBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeErrorsBase.swift; sourceTree = "<group>"; };
+		8FBE31162840F22B00B8FEC9 /* HomeErrors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeErrors.swift; sourceTree = "<group>"; };
+		8FC014A52840EE4E0023174C /* HomeData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeData.swift; sourceTree = "<group>"; };
+		8FC014A62840EE4E0023174C /* HomeLinks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeLinks.swift; sourceTree = "<group>"; };
+		8FC014A72840EE4E0023174C /* HomeBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeBase.swift; sourceTree = "<group>"; };
+		8FC1735928412B7A006C6F19 /* eventHomeBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = eventHomeBase.swift; sourceTree = "<group>"; };
+		8FC1735A28412B7A006C6F19 /* eventData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = eventData.swift; sourceTree = "<group>"; };
+		8FC89AEE2841ACA10044C854 /* createBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = createBase.swift; sourceTree = "<group>"; };
+		8FC89AEF2841ACA10044C854 /* createData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = createData.swift; sourceTree = "<group>"; };
 		8FD0E61F28380E8100206FD0 /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		8FD6ECED28330255004B96D9 /* eventVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eventVC.swift; sourceTree = "<group>"; };
+		8FE205CA2840BEA400393900 /* signUpBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = signUpBase.swift; sourceTree = "<group>"; };
+		8FE205CB2840BEA400393900 /* signUpData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = signUpData.swift; sourceTree = "<group>"; };
+		8FE205CE2840C09D00393900 /* signUpErrors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = signUpErrors.swift; sourceTree = "<group>"; };
+		8FE205CF2840C09D00393900 /* errorSignUpBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = errorSignUpBase.swift; sourceTree = "<group>"; };
+		8FEA865B2840D6420087B28F /* homeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +129,9 @@
 			children = (
 				8FB042842828B1D60076DB99 /* Events Controllers */,
 				8FB20365282350B3000D3D32 /* main Controllers */,
+				8FEA86592840D6130087B28F /* Home */,
+				8FE205C82840BD5700393900 /* authantication */,
+				8FEA865A2840D62A0087B28F /* cells */,
 				8FB042832828AE950076DB99 /* Storyboards */,
 				8F5C286528220EF2007B1F7B /* AppDelegate.swift */,
 				8F5C286728220EF2007B1F7B /* SceneDelegate.swift */,
@@ -106,6 +141,15 @@
 				8F5C287328220EF3007B1F7B /* Info.plist */,
 			);
 			path = Ticcket;
+			sourceTree = "<group>";
+		};
+		8F86496D2841818D0074E3BC /* ScanQR */ = {
+			isa = PBXGroup;
+			children = (
+				8F86496E284181B80074E3BC /* ScanQRVC.swift */,
+				8F8649702841945F0074E3BC /* ScanViewController.swift */,
+			);
+			path = ScanQR;
 			sourceTree = "<group>";
 		};
 		8FB042832828AE950076DB99 /* Storyboards */ = {
@@ -120,8 +164,11 @@
 		8FB042842828B1D60076DB99 /* Events Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				8FC89AEC2841AC680044C854 /* createEvent */,
+				8F86496D2841818D0074E3BC /* ScanQR */,
+				8FC1735728412B2C006C6F19 /* Event */,
 				8FB042852828B20A0076DB99 /* createEventVC.swift */,
-				8FD6ECED28330255004B96D9 /* eventVC.swift */,
+				8FBC34A12838FCA20065A124 /* QRCodeVC.swift */,
 			);
 			path = "Events Controllers";
 			sourceTree = "<group>";
@@ -129,17 +176,98 @@
 		8FB20365282350B3000D3D32 /* main Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				8FB2036A28235176000D3D32 /* signUpInVc.swift */,
-				8FB042872828B4EB0076DB99 /* HomeVC.swift */,
 				8FB042892828B54F0076DB99 /* SearchViewController.swift */,
 				8FB0428B2828B5640076DB99 /* MyEventsViewController.swift */,
 				8FB0428D2828B5720076DB99 /* AccountViewController.swift */,
-				8FBA414228318EA20053ABA3 /* eventTableViewCell.swift */,
-				8FBA4144283195E00053ABA3 /* TableViewCell.swift */,
 				8FD0E61F28380E8100206FD0 /* HomeTableViewController.swift */,
-				8FBC34A12838FCA20065A124 /* QRCodeVC.swift */,
 			);
 			path = "main Controllers";
+			sourceTree = "<group>";
+		};
+		8FC014A42840EE4E0023174C /* HomeBackend */ = {
+			isa = PBXGroup;
+			children = (
+				8FC014A52840EE4E0023174C /* HomeData.swift */,
+				8FC014A62840EE4E0023174C /* HomeLinks.swift */,
+				8FC014A72840EE4E0023174C /* HomeBase.swift */,
+				8FBE31152840F22B00B8FEC9 /* HomeErrorsBase.swift */,
+				8FBE31162840F22B00B8FEC9 /* HomeErrors.swift */,
+			);
+			path = HomeBackend;
+			sourceTree = "<group>";
+		};
+		8FC1735728412B2C006C6F19 /* Event */ = {
+			isa = PBXGroup;
+			children = (
+				8FD6ECED28330255004B96D9 /* eventVC.swift */,
+				8FC1735828412B35006C6F19 /* HomeEventBackend */,
+			);
+			path = Event;
+			sourceTree = "<group>";
+		};
+		8FC1735828412B35006C6F19 /* HomeEventBackend */ = {
+			isa = PBXGroup;
+			children = (
+				8FC1735A28412B7A006C6F19 /* eventData.swift */,
+				8FC1735928412B7A006C6F19 /* eventHomeBase.swift */,
+			);
+			path = HomeEventBackend;
+			sourceTree = "<group>";
+		};
+		8FC89AEC2841AC680044C854 /* createEvent */ = {
+			isa = PBXGroup;
+			children = (
+				8FC89AED2841AC750044C854 /* createEventBackend */,
+			);
+			path = createEvent;
+			sourceTree = "<group>";
+		};
+		8FC89AED2841AC750044C854 /* createEventBackend */ = {
+			isa = PBXGroup;
+			children = (
+				8FC89AEE2841ACA10044C854 /* createBase.swift */,
+				8FC89AEF2841ACA10044C854 /* createData.swift */,
+			);
+			path = createEventBackend;
+			sourceTree = "<group>";
+		};
+		8FE205C82840BD5700393900 /* authantication */ = {
+			isa = PBXGroup;
+			children = (
+				8FB2036A28235176000D3D32 /* signUpInVc.swift */,
+				8FE205C92840BD7400393900 /* signUpBackend */,
+			);
+			path = authantication;
+			sourceTree = "<group>";
+		};
+		8FE205C92840BD7400393900 /* signUpBackend */ = {
+			isa = PBXGroup;
+			children = (
+				8FE205CA2840BEA400393900 /* signUpBase.swift */,
+				8FE205CB2840BEA400393900 /* signUpData.swift */,
+				8FE205CF2840C09D00393900 /* errorSignUpBase.swift */,
+				8FE205CE2840C09D00393900 /* signUpErrors.swift */,
+			);
+			path = signUpBackend;
+			sourceTree = "<group>";
+		};
+		8FEA86592840D6130087B28F /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				8FB042872828B4EB0076DB99 /* HomeVC.swift */,
+				8FC014A42840EE4E0023174C /* HomeBackend */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		8FEA865A2840D62A0087B28F /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				8FBA414228318EA20053ABA3 /* eventTableViewCell.swift */,
+				8FBA4144283195E00053ABA3 /* TableViewCell.swift */,
+				8FEA865B2840D6420087B28F /* homeTableViewCell.swift */,
+			);
+			path = cells;
 			sourceTree = "<group>";
 		};
 		EF768291B00E8D1F4F37F6B1 /* Pods */ = {
@@ -267,16 +395,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FE205CC2840BEA400393900 /* signUpBase.swift in Sources */,
+				8FBE31182840F22B00B8FEC9 /* HomeErrors.swift in Sources */,
+				8FEA865C2840D6420087B28F /* homeTableViewCell.swift in Sources */,
+				8F86496F284181B80074E3BC /* ScanQRVC.swift in Sources */,
 				8F5C286A28220EF2007B1F7B /* ViewController.swift in Sources */,
+				8FC014AA2840EE4E0023174C /* HomeBase.swift in Sources */,
 				8FB0428C2828B5640076DB99 /* MyEventsViewController.swift in Sources */,
+				8FC014A82840EE4E0023174C /* HomeData.swift in Sources */,
 				8FB0428A2828B54F0076DB99 /* SearchViewController.swift in Sources */,
+				8FC1735B28412B7A006C6F19 /* eventHomeBase.swift in Sources */,
 				8F5C286628220EF2007B1F7B /* AppDelegate.swift in Sources */,
 				8FBC34A22838FCA20065A124 /* QRCodeVC.swift in Sources */,
 				8FB042862828B20A0076DB99 /* createEventVC.swift in Sources */,
+				8FC1735C28412B7A006C6F19 /* eventData.swift in Sources */,
+				8FE205D12840C09D00393900 /* errorSignUpBase.swift in Sources */,
+				8F8649712841945F0074E3BC /* ScanViewController.swift in Sources */,
+				8FC89AF02841ACA10044C854 /* createBase.swift in Sources */,
+				8FC89AF12841ACA10044C854 /* createData.swift in Sources */,
+				8FE205D02840C09D00393900 /* signUpErrors.swift in Sources */,
+				8FBE31172840F22B00B8FEC9 /* HomeErrorsBase.swift in Sources */,
 				8FB042882828B4EB0076DB99 /* HomeVC.swift in Sources */,
+				8FC014A92840EE4E0023174C /* HomeLinks.swift in Sources */,
 				8FBA4145283195E00053ABA3 /* TableViewCell.swift in Sources */,
 				8FBA414328318EA20053ABA3 /* eventTableViewCell.swift in Sources */,
 				8FD0E62028380E8100206FD0 /* HomeTableViewController.swift in Sources */,
+				8FE205CD2840BEA400393900 /* signUpData.swift in Sources */,
 				8F5C286828220EF2007B1F7B /* SceneDelegate.swift in Sources */,
 				8FB2036B28235176000D3D32 /* signUpInVc.swift in Sources */,
 				8FB0428E2828B5720076DB99 /* AccountViewController.swift in Sources */,
