@@ -17,8 +17,6 @@ class ScanQRVC: UIViewController, QRScannerViewDelegate {
         super.viewDidLoad()
         setupQRScanner()
 
-
-        // Do any additional setup after loading the view.
     }
     
 

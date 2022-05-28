@@ -678,7 +678,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="SbV-c5-YLh">
-                                <rect key="frame" x="0.0" y="216" width="375" height="200"/>
+                                <rect key="frame" x="0.0" y="244" width="375" height="200"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="44t-eo-YPp" userLabel="shadow">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="2"/>
@@ -691,9 +691,10 @@
                                         <rect key="frame" x="0.0" y="2" width="375" height="64"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mxt-5I-Iad">
-                                                <rect key="frame" x="16" y="8" width="114" height="48"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Create Events"/>
+                                                <rect key="frame" x="16" y="8" width="117" height="48"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Create Events"/>
                                             </button>
                                         </subviews>
                                         <viewLayoutGuide key="safeArea" id="fFz-ob-FYo"/>
@@ -717,9 +718,10 @@
                                         <rect key="frame" x="0.0" y="68" width="375" height="64"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YAk-Ms-0Zl">
-                                                <rect key="frame" x="16" y="8" width="54" height="48"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Help"/>
+                                                <rect key="frame" x="16" y="8" width="39" height="48"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Help"/>
                                             </button>
                                         </subviews>
                                         <viewLayoutGuide key="safeArea" id="OXR-Gx-W4O"/>
@@ -743,9 +745,10 @@
                                         <rect key="frame" x="0.0" y="134" width="375" height="64"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MYE-w9-Oq8">
-                                                <rect key="frame" x="16" y="8" width="75.666666666666671" height="48"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Log Out"/>
+                                                <rect key="frame" x="16" y="8" width="67" height="48"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Log Out"/>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -766,13 +769,29 @@
                                     </view>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KZj-Hf-qdw">
+                                <rect key="frame" x="64" y="96" width="247" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="128" id="4h7-WV-YS6"/>
+                                    <constraint firstAttribute="height" constant="128" id="l2w-Sy-oTN"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="3"/>
+                                <connections>
+                                    <action selector="profileClicking:" destination="zze-Re-2oH" eventType="touchUpInside" id="eK0-Id-BdT"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="IKi-Tt-npm"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.93750704060000001" green="0.94183498200000004" blue="0.95481880610000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="SbV-c5-YLh" firstAttribute="leading" secondItem="IKi-Tt-npm" secondAttribute="leading" id="1iS-AO-BnD"/>
+                            <constraint firstItem="KZj-Hf-qdw" firstAttribute="leading" secondItem="IKi-Tt-npm" secondAttribute="leading" constant="64" id="4fL-m5-pZB"/>
                             <constraint firstAttribute="trailing" secondItem="SbV-c5-YLh" secondAttribute="trailing" id="6V7-FJ-w6p"/>
-                            <constraint firstItem="SbV-c5-YLh" firstAttribute="top" secondItem="IKi-Tt-npm" secondAttribute="top" constant="128" id="vyM-fz-mkw"/>
+                            <constraint firstItem="KZj-Hf-qdw" firstAttribute="centerX" secondItem="k5U-sE-aV5" secondAttribute="centerX" id="Nz8-t2-GyY"/>
+                            <constraint firstItem="KZj-Hf-qdw" firstAttribute="top" secondItem="IKi-Tt-npm" secondAttribute="top" constant="8" id="f2p-j9-lj5"/>
+                            <constraint firstItem="IKi-Tt-npm" firstAttribute="trailing" secondItem="KZj-Hf-qdw" secondAttribute="trailing" constant="64" id="kwF-xy-qNu"/>
+                            <constraint firstItem="SbV-c5-YLh" firstAttribute="top" secondItem="IKi-Tt-npm" secondAttribute="top" constant="156" id="vyM-fz-mkw"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Account" id="GFd-bT-WPz"/>
@@ -810,6 +829,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="3" width="230" height="172"/>
         <image name="Account" width="26.333333969116211" height="28"/>
         <image name="Category" width="28" height="28"/>
         <image name="Home" width="25" height="28.333333969116211"/>

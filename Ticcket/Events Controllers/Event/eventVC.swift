@@ -46,7 +46,7 @@ class eventVC: UIViewController{
     @IBAction func scanClicking(_ sender: Any) {
         
         let Events = UIStoryboard(name: "Event", bundle: nil)
-        let scanQRCode = Events.instantiateViewController(withIdentifier: "ScanViewController") as! ScanViewController
+        let scanQRCode = Events.instantiateViewController(withIdentifier: "ScanQRVC") as! ScanQRVC
         scanQRCode.modalPresentationStyle = .fullScreen
         self.show(scanQRCode, sender: self)
     }

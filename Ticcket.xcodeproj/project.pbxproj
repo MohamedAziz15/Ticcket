@@ -167,7 +167,6 @@
 				8FC89AEC2841AC680044C854 /* createEvent */,
 				8F86496D2841818D0074E3BC /* ScanQR */,
 				8FC1735728412B2C006C6F19 /* Event */,
-				8FB042852828B20A0076DB99 /* createEventVC.swift */,
 				8FBC34A12838FCA20065A124 /* QRCodeVC.swift */,
 			);
 			path = "Events Controllers";
@@ -217,6 +216,7 @@
 		8FC89AEC2841AC680044C854 /* createEvent */ = {
 			isa = PBXGroup;
 			children = (
+				8FB042852828B20A0076DB99 /* createEventVC.swift */,
 				8FC89AED2841AC750044C854 /* createEventBackend */,
 			);
 			path = createEvent;

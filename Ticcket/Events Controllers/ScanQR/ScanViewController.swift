@@ -14,8 +14,8 @@ class ScanViewController: UIViewController, QRScannerCodeDelegate  {
         super.viewDidLoad()
         let scanner = QRCodeScannerController()
      //   let scanner1 = QRScannerCodeDelegate()
-      //  scanner1.delegate = self
-//        scanner.delegate = self
+       // scanner1.delegate = self
+        //scanner.delegate = self
         self.present(scanner, animated: true, completion: nil)
 
     }

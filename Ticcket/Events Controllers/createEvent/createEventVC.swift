@@ -10,7 +10,7 @@ import Alamofire
 import ObjectMapper
 import SwiftMessages
 
-class createEventVC: UIViewController {
+class createEventVC: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
 
     @IBOutlet var logoTF: UITextField!
     @IBOutlet var createEventBTN: UIButton!
@@ -23,19 +23,77 @@ class createEventVC: UIViewController {
     @IBOutlet var AnnouncementsLBL: UITextField!
     
     @IBOutlet var indicator: UIActivityIndicatorView!
+    @IBOutlet var ticketsView: UIView!
+    @IBOutlet var borderView1: UIView!
+    
+    @IBOutlet var chooseImgBTN: UIButton!
+    @IBOutlet var imageView: UIImageView!
+    
+    
+    @IBOutlet var logoView: UIView!
+    @IBOutlet var eventNameView: UIView!
+    @IBOutlet var descriptionView: UIView!
+    @IBOutlet var organizersview: UIView!
+    @IBOutlet var startAtView: UIView!
+    @IBOutlet var endAtView: UIView!
+    
+    
+    
+    
     
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
         createEventBTN.layer.cornerRadius = 10.0
-        createEventApi()
         self.indicator.isHidden=true
+        ticketsView.isHidden = true
+        chooseImgBTN.layer.cornerRadius = 10.0
+        imageView.layer.cornerRadius = 10.0
+        borderView1.layer.isHidden=true
+        logoView.layer.cornerRadius=10.0
+        eventNameView.layer.cornerRadius=10.0
+        descriptionView.layer.cornerRadius=10.0
+        organizersview.layer.cornerRadius=10.0
+        startAtView.layer.cornerRadius=10.0
+        endAtView.layer.cornerRadius=10.0
 
     }
+    @IBAction func createEvent(_ sender: Any) {
+        createEventApi()
+        
+    }
+    @IBAction func chooseImageClicking(_ sender: Any) {
+        
+        let imagePicker = UIImagePickerController()
+
+
+               if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum){
+                   print("Button capture")
+
+                   imagePicker.delegate = self
+                   imagePicker.sourceType = .savedPhotosAlbum
+                   imagePicker.allowsEditing = true
+
+                   present(imagePicker, animated: true, completion: nil)
+               }
+           }
+
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage{
+            imageView.image = image
+        }
+        picker.dismiss(animated: true, completion:nil)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
+    }
+    
     func createEventApi(){
         self.indicator.isHidden=false
         self.indicator.startAnimating()
+        createEventBTN.setTitle("", for: .normal)
         let headers : HTTPHeaders = ["Accept-Language":"en","Accept":"application/json","Authorization":"Bearer \(UserDefaults.standard.string(forKey: "authorization") ?? "")"]
         let params = ["title":self.eventNameLBL.text!,
                       "description":self.descriptionLBL.text!,
@@ -46,6 +104,7 @@ class createEventVC: UIViewController {
         AF.request( "http://178.62.201.95/api/events", method: .post,parameters: params, headers: headers).responseJSON{response in
             self.indicator.stopAnimating()
             self.indicator.isHidden=true
+            self.createEventBTN.setTitle("create Event", for: .normal)
             print(response.response?.statusCode ?? "")
             switch response.result{
             case .success(let value):
@@ -81,9 +140,6 @@ class createEventVC: UIViewController {
 
                 //    self.homearr = HomeResponse?.data ?? []
                   //  self.homeTableView.reloadData()
-                    
-                    
-                    
                     
                 }else{
                     let createError = Mapper<createErrorBase>().map(JSONObject: value)
