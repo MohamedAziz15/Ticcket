@@ -17,6 +17,7 @@ class HomeVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
     @IBOutlet var indicator: UIActivityIndicatorView!
     
     var homearr = [HomeData]()
+    var home2 : HomeData?
     var home1 : HomeBase?
     
     override func viewDidLoad()
@@ -56,10 +57,14 @@ class HomeVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
         let cell = homeTableView.dequeueReusableCell(withIdentifier: "cell1", for: indexPath) as! homeTableViewCell
         cell.titleLBL.text = homearr[indexPath.row].title
         cell.descriptionLBL.text = homearr[indexPath.row].description
-        let imageUrl=URL(string: homearr[indexPath.row].logo ?? "")
+        let imageUrl=URL(string: "http://178.62.201.95/"+(homearr[indexPath.row].logo ?? "") )
         cell.logoImg.kf.indicatorType = .activity
         cell.logoImg.kf.setImage(with: imageUrl)
-        
+//        let Events = UIStoryboard(name: "Event", bundle: nil)
+//        let Event = Events.instantiateViewController(withIdentifier: "eventVC") as! eventVC
+//        Event.homeEvent = self.homearr[indexPath.row]
+//        Event.modalPresentationStyle  = .fullScreen
+//        self.show(Event, sender: self)
         return cell
         }
     
@@ -76,7 +81,7 @@ extension HomeVC{
     func getAllEvent(){
         self.indicator.isHidden=false
         self.indicator.startAnimating()
-        let headers : HTTPHeaders = ["Accept-Language":"en","Accept":"application/json","Authorization":"Bearer \(UserDefaults.standard.string(forKey: "authorization") ?? "")"]
+        let headers : HTTPHeaders = ["Accept-Language":"en","Accept":"application/json","Authorization":"Bearer \(UserDefaults.standard.string(forKey: "token") ?? "")"]
 
         AF.request( "http://178.62.201.95/api/events", method: .get, headers: headers).responseJSON{response in
             self.indicator.stopAnimating()

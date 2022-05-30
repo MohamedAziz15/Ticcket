@@ -8,6 +8,7 @@
 import UIKit
 import MercariQRScanner
 import AVFoundation
+import SwiftMessages
 
 
 class ScanQRVC: UIViewController, QRScannerViewDelegate {
@@ -56,6 +57,30 @@ class ScanQRVC: UIViewController, QRScannerViewDelegate {
         }
     
         func qrScannerView(_ qrScannerView: QRScannerView, didSuccess code: String) {
+            let view = MessageView.viewFromNib(layout: .cardView)
+            view.button?.isHidden = true
+
+            // Theme message elements with the warning style.
+            view.configureTheme(.success)
+
+            // Add a drop shadow.
+            view.configureDropShadow()
+
+            // Set message title, body, and icon. Here, we're overriding the default warning
+            // image with an emoji character.
+            let iconText = ["✅"].randomElement()!
+            view.configureContent(title: "QR code Scanned", body: "success")
+
+            // Increase the external margin around the card. In general, the effect of this setting
+            // depends on how the given layout is constrained to the layout margins.
+            view.layoutMarginAdditions = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
+
+            // Reduce the corner radius (applicable to layouts featuring rounded corners).
+            (view.backgroundView as? CornerRoundingView)?.cornerRadius = 10
+
+            // Show the message.
+            SwiftMessages.show(view: view)
+
     
         }
 }

@@ -292,7 +292,7 @@
                                 <rect key="frame" x="169" y="387.66666666666669" width="37" height="37"/>
                             </activityIndicatorView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Ygi-hb-LE3">
-                                <rect key="frame" x="0.0" y="88" width="375" height="724"/>
+                                <rect key="frame" x="0.0" y="88" width="375" height="592"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="homeTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell1" rowHeight="176" id="OdF-dy-y7E" customClass="homeTableViewCell" customModule="Ticcket" customModuleProvider="target">
@@ -365,7 +365,7 @@
                         <viewLayoutGuide key="safeArea" id="xts-lv-b0B"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="Ygi-hb-LE3" secondAttribute="bottom" id="3o6-Q7-Lrg"/>
+                            <constraint firstItem="xts-lv-b0B" firstAttribute="bottom" secondItem="Ygi-hb-LE3" secondAttribute="bottom" id="3o6-Q7-Lrg"/>
                             <constraint firstItem="xts-lv-b0B" firstAttribute="trailing" secondItem="Ygi-hb-LE3" secondAttribute="trailing" id="IEy-iT-ien"/>
                             <constraint firstItem="xTr-mF-m4B" firstAttribute="centerY" secondItem="aE2-XL-NJJ" secondAttribute="centerY" id="Mx3-Hh-oLs"/>
                             <constraint firstItem="xTr-mF-m4B" firstAttribute="centerX" secondItem="aE2-XL-NJJ" secondAttribute="centerX" id="Vqh-lq-4TR"/>
@@ -691,10 +691,10 @@
                                         <rect key="frame" x="0.0" y="2" width="375" height="64"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mxt-5I-Iad">
-                                                <rect key="frame" x="16" y="8" width="117" height="48"/>
+                                                <rect key="frame" x="16" y="8" width="148" height="48"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" title="Create Events"/>
+                                                <state key="normal" title="Organized Events"/>
                                             </button>
                                         </subviews>
                                         <viewLayoutGuide key="safeArea" id="fFz-ob-FYo"/>
@@ -770,31 +770,42 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KZj-Hf-qdw">
-                                <rect key="frame" x="64" y="96" width="247" height="128"/>
+                                <rect key="frame" x="128" y="96" width="119" height="128"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="128" id="4h7-WV-YS6"/>
                                     <constraint firstAttribute="height" constant="128" id="l2w-Sy-oTN"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" image="3"/>
                                 <connections>
                                     <action selector="profileClicking:" destination="zze-Re-2oH" eventType="touchUpInside" id="eK0-Id-BdT"/>
+                                    <action selector="uploadClicking:" destination="zze-Re-2oH" eventType="touchUpInside" id="H7z-BI-2lQ"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile picture" translatesAutoresizingMaskIntoConstraints="NO" id="Hsl-nq-1Mf">
+                                <rect key="frame" x="119" y="104" width="128" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="Wo7-4f-TTD"/>
+                                    <constraint firstAttribute="width" constant="128" id="kwK-4D-vIA"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="IKi-Tt-npm"/>
                         <color key="backgroundColor" red="0.93750704060000001" green="0.94183498200000004" blue="0.95481880610000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="SbV-c5-YLh" firstAttribute="leading" secondItem="IKi-Tt-npm" secondAttribute="leading" id="1iS-AO-BnD"/>
-                            <constraint firstItem="KZj-Hf-qdw" firstAttribute="leading" secondItem="IKi-Tt-npm" secondAttribute="leading" constant="64" id="4fL-m5-pZB"/>
+                            <constraint firstItem="KZj-Hf-qdw" firstAttribute="leading" secondItem="IKi-Tt-npm" secondAttribute="leading" constant="128" id="4fL-m5-pZB"/>
                             <constraint firstAttribute="trailing" secondItem="SbV-c5-YLh" secondAttribute="trailing" id="6V7-FJ-w6p"/>
-                            <constraint firstItem="KZj-Hf-qdw" firstAttribute="centerX" secondItem="k5U-sE-aV5" secondAttribute="centerX" id="Nz8-t2-GyY"/>
+                            <constraint firstItem="Hsl-nq-1Mf" firstAttribute="top" secondItem="IKi-Tt-npm" secondAttribute="top" constant="16" id="801-bR-jlP"/>
+                            <constraint firstItem="IKi-Tt-npm" firstAttribute="trailing" secondItem="Hsl-nq-1Mf" secondAttribute="trailing" constant="128" id="cje-Om-pIR"/>
                             <constraint firstItem="KZj-Hf-qdw" firstAttribute="top" secondItem="IKi-Tt-npm" secondAttribute="top" constant="8" id="f2p-j9-lj5"/>
-                            <constraint firstItem="IKi-Tt-npm" firstAttribute="trailing" secondItem="KZj-Hf-qdw" secondAttribute="trailing" constant="64" id="kwF-xy-qNu"/>
+                            <constraint firstItem="IKi-Tt-npm" firstAttribute="trailing" secondItem="KZj-Hf-qdw" secondAttribute="trailing" constant="128" id="kwF-xy-qNu"/>
                             <constraint firstItem="SbV-c5-YLh" firstAttribute="top" secondItem="IKi-Tt-npm" secondAttribute="top" constant="156" id="vyM-fz-mkw"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Account" id="GFd-bT-WPz"/>
+                    <connections>
+                        <outlet property="imageView" destination="Hsl-nq-1Mf" id="8uJ-hJ-YB1"/>
+                        <outlet property="uploadProfileBTN" destination="KZj-Hf-qdw" id="cqo-wv-6QZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MAv-hs-era" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -829,11 +840,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="3" width="230" height="172"/>
         <image name="Account" width="26.333333969116211" height="28"/>
         <image name="Category" width="28" height="28"/>
         <image name="Home" width="25" height="28.333333969116211"/>
         <image name="Search" width="26" height="26.333333969116211"/>
+        <image name="profile picture" width="640" height="640"/>
         <image name="splash-1" width="641" height="1107"/>
         <image name="techne logo" width="225" height="225"/>
         <systemColor name="linkColor">

@@ -46,7 +46,13 @@ extension MyEventsViewController:UITableViewDelegate , UITableViewDataSource{
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selected == indexPath.row
+        selected = indexPath.row
+        if indexPath.row == selected{
+            let Events = UIStoryboard(name: "Event", bundle: nil)
+            let Event = Events.instantiateViewController(withIdentifier: "eventVC")
+            Event.modalPresentationStyle  = .fullScreen
+            self.show(Event, sender: self)
+        }
     }
     
 }

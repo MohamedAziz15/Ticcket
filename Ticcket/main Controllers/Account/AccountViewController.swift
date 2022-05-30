@@ -7,26 +7,25 @@
 
 import UIKit
 
-class AccountViewController: UIViewController {
+class AccountViewController: UIViewController,UIImagePickerControllerDelegate & UINavigationControllerDelegate {
 
-    @IBOutlet var profileImg: UIImageView!
     
+    @IBOutlet var imageView: UIImageView!
+    @IBOutlet var uploadProfileBTN: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        profileImg.layer.cornerRadius = 20.0
+        imageView.layer.cornerRadius = 20.0
 
     }
     
+    @IBAction func uploadClicking(_ sender: Any) {
     
 
 
-
     let imagePicker = UIImagePickerController()
-
-    @IBAction func profileClicking(_ sender: Any) {
         
-        if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum){
+    if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum){
             print("Button capture")
 
             imagePicker.delegate = self
@@ -42,7 +41,7 @@ class AccountViewController: UIViewController {
 
 func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
     if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage{
-        profileImg.image = image
+        imageView.image = image
     }
     picker.dismiss(animated: true, completion:nil)
 }

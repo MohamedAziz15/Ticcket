@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F1BFF2928439D1900666AC5 /* loginData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1BFF2728439D1900666AC5 /* loginData.swift */; };
+		8F1BFF2A28439D1900666AC5 /* loginBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1BFF2828439D1900666AC5 /* loginBase.swift */; };
+		8F1BFF302843C18300666AC5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1BFF2C2843C18300666AC5 /* User.swift */; };
+		8F1BFF312843C18300666AC5 /* QRCodeTicketData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1BFF2D2843C18300666AC5 /* QRCodeTicketData.swift */; };
+		8F1BFF322843C18300666AC5 /* QRcodeBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1BFF2E2843C18300666AC5 /* QRcodeBase.swift */; };
+		8F1BFF332843C18300666AC5 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1BFF2F2843C18300666AC5 /* Event.swift */; };
 		8F5C286628220EF2007B1F7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5C286528220EF2007B1F7B /* AppDelegate.swift */; };
 		8F5C286828220EF2007B1F7B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5C286728220EF2007B1F7B /* SceneDelegate.swift */; };
 		8F5C286A28220EF2007B1F7B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5C286928220EF2007B1F7B /* ViewController.swift */; };
@@ -48,6 +54,12 @@
 		43D45AC702E286C7A7FD9C42 /* Pods_Ticcket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ticcket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		65A84DF068A5303B19B5C176 /* Pods-Ticcket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ticcket.release.xcconfig"; path = "Target Support Files/Pods-Ticcket/Pods-Ticcket.release.xcconfig"; sourceTree = "<group>"; };
 		86015CB88AB91EB0EC506029 /* Pods-Ticcket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ticcket.debug.xcconfig"; path = "Target Support Files/Pods-Ticcket/Pods-Ticcket.debug.xcconfig"; sourceTree = "<group>"; };
+		8F1BFF2728439D1900666AC5 /* loginData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loginData.swift; sourceTree = "<group>"; };
+		8F1BFF2828439D1900666AC5 /* loginBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loginBase.swift; sourceTree = "<group>"; };
+		8F1BFF2C2843C18300666AC5 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		8F1BFF2D2843C18300666AC5 /* QRCodeTicketData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeTicketData.swift; sourceTree = "<group>"; };
+		8F1BFF2E2843C18300666AC5 /* QRcodeBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRcodeBase.swift; sourceTree = "<group>"; };
+		8F1BFF2F2843C18300666AC5 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		8F5C286228220EF2007B1F7B /* Ticcket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ticcket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F5C286528220EF2007B1F7B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8F5C286728220EF2007B1F7B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +118,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8F1BFF2B2843C16200666AC5 /* bookQRCodeBackend */ = {
+			isa = PBXGroup;
+			children = (
+				8F1BFF2F2843C18300666AC5 /* Event.swift */,
+				8F1BFF2E2843C18300666AC5 /* QRcodeBase.swift */,
+				8F1BFF2D2843C18300666AC5 /* QRCodeTicketData.swift */,
+				8F1BFF2C2843C18300666AC5 /* User.swift */,
+			);
+			path = bookQRCodeBackend;
+			sourceTree = "<group>";
+		};
 		8F5C285928220EF2007B1F7B = {
 			isa = PBXGroup;
 			children = (
@@ -129,9 +152,6 @@
 			children = (
 				8FB042842828B1D60076DB99 /* Events Controllers */,
 				8FB20365282350B3000D3D32 /* main Controllers */,
-				8FEA86592840D6130087B28F /* Home */,
-				8FE205C82840BD5700393900 /* authantication */,
-				8FEA865A2840D62A0087B28F /* cells */,
 				8FB042832828AE950076DB99 /* Storyboards */,
 				8F5C286528220EF2007B1F7B /* AppDelegate.swift */,
 				8F5C286728220EF2007B1F7B /* SceneDelegate.swift */,
@@ -164,10 +184,10 @@
 		8FB042842828B1D60076DB99 /* Events Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				8FC306C628436B1700B9C786 /* QrCode */,
 				8FC89AEC2841AC680044C854 /* createEvent */,
 				8F86496D2841818D0074E3BC /* ScanQR */,
 				8FC1735728412B2C006C6F19 /* Event */,
-				8FBC34A12838FCA20065A124 /* QRCodeVC.swift */,
 			);
 			path = "Events Controllers";
 			sourceTree = "<group>";
@@ -175,12 +195,24 @@
 		8FB20365282350B3000D3D32 /* main Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				8FB042892828B54F0076DB99 /* SearchViewController.swift */,
-				8FB0428B2828B5640076DB99 /* MyEventsViewController.swift */,
-				8FB0428D2828B5720076DB99 /* AccountViewController.swift */,
 				8FD0E61F28380E8100206FD0 /* HomeTableViewController.swift */,
+				8FE205C82840BD5700393900 /* authantication */,
+				8FEA86592840D6130087B28F /* Home */,
+				8FC306C728436B6000B9C786 /* Search */,
+				8FC306C828436B9300B9C786 /* MyEvent */,
+				8FC306C928436BA300B9C786 /* Account */,
+				8FEA865A2840D62A0087B28F /* cells */,
 			);
 			path = "main Controllers";
+			sourceTree = "<group>";
+		};
+		8FBA652C284395CE003B48EB /* loginBackend */ = {
+			isa = PBXGroup;
+			children = (
+				8F1BFF2828439D1900666AC5 /* loginBase.swift */,
+				8F1BFF2728439D1900666AC5 /* loginData.swift */,
+			);
+			path = loginBackend;
 			sourceTree = "<group>";
 		};
 		8FC014A42840EE4E0023174C /* HomeBackend */ = {
@@ -198,6 +230,7 @@
 		8FC1735728412B2C006C6F19 /* Event */ = {
 			isa = PBXGroup;
 			children = (
+				8F1BFF2B2843C16200666AC5 /* bookQRCodeBackend */,
 				8FD6ECED28330255004B96D9 /* eventVC.swift */,
 				8FC1735828412B35006C6F19 /* HomeEventBackend */,
 			);
@@ -211,6 +244,38 @@
 				8FC1735928412B7A006C6F19 /* eventHomeBase.swift */,
 			);
 			path = HomeEventBackend;
+			sourceTree = "<group>";
+		};
+		8FC306C628436B1700B9C786 /* QrCode */ = {
+			isa = PBXGroup;
+			children = (
+				8FBC34A12838FCA20065A124 /* QRCodeVC.swift */,
+			);
+			path = QrCode;
+			sourceTree = "<group>";
+		};
+		8FC306C728436B6000B9C786 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				8FB042892828B54F0076DB99 /* SearchViewController.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		8FC306C828436B9300B9C786 /* MyEvent */ = {
+			isa = PBXGroup;
+			children = (
+				8FB0428B2828B5640076DB99 /* MyEventsViewController.swift */,
+			);
+			path = MyEvent;
+			sourceTree = "<group>";
+		};
+		8FC306C928436BA300B9C786 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				8FB0428D2828B5720076DB99 /* AccountViewController.swift */,
+			);
+			path = Account;
 			sourceTree = "<group>";
 		};
 		8FC89AEC2841AC680044C854 /* createEvent */ = {
@@ -235,6 +300,7 @@
 			isa = PBXGroup;
 			children = (
 				8FB2036A28235176000D3D32 /* signUpInVc.swift */,
+				8FBA652C284395CE003B48EB /* loginBackend */,
 				8FE205C92840BD7400393900 /* signUpBackend */,
 			);
 			path = authantication;
@@ -399,6 +465,7 @@
 				8FBE31182840F22B00B8FEC9 /* HomeErrors.swift in Sources */,
 				8FEA865C2840D6420087B28F /* homeTableViewCell.swift in Sources */,
 				8F86496F284181B80074E3BC /* ScanQRVC.swift in Sources */,
+				8F1BFF2928439D1900666AC5 /* loginData.swift in Sources */,
 				8F5C286A28220EF2007B1F7B /* ViewController.swift in Sources */,
 				8FC014AA2840EE4E0023174C /* HomeBase.swift in Sources */,
 				8FB0428C2828B5640076DB99 /* MyEventsViewController.swift in Sources */,
@@ -411,6 +478,7 @@
 				8FC1735C28412B7A006C6F19 /* eventData.swift in Sources */,
 				8FE205D12840C09D00393900 /* errorSignUpBase.swift in Sources */,
 				8F8649712841945F0074E3BC /* ScanViewController.swift in Sources */,
+				8F1BFF322843C18300666AC5 /* QRcodeBase.swift in Sources */,
 				8FC89AF02841ACA10044C854 /* createBase.swift in Sources */,
 				8FC89AF12841ACA10044C854 /* createData.swift in Sources */,
 				8FE205D02840C09D00393900 /* signUpErrors.swift in Sources */,
@@ -419,12 +487,16 @@
 				8FC014A92840EE4E0023174C /* HomeLinks.swift in Sources */,
 				8FBA4145283195E00053ABA3 /* TableViewCell.swift in Sources */,
 				8FBA414328318EA20053ABA3 /* eventTableViewCell.swift in Sources */,
+				8F1BFF312843C18300666AC5 /* QRCodeTicketData.swift in Sources */,
 				8FD0E62028380E8100206FD0 /* HomeTableViewController.swift in Sources */,
+				8F1BFF332843C18300666AC5 /* Event.swift in Sources */,
 				8FE205CD2840BEA400393900 /* signUpData.swift in Sources */,
 				8F5C286828220EF2007B1F7B /* SceneDelegate.swift in Sources */,
 				8FB2036B28235176000D3D32 /* signUpInVc.swift in Sources */,
 				8FB0428E2828B5720076DB99 /* AccountViewController.swift in Sources */,
+				8F1BFF2A28439D1900666AC5 /* loginBase.swift in Sources */,
 				8FD6ECEE28330255004B96D9 /* eventVC.swift in Sources */,
+				8F1BFF302843C18300666AC5 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

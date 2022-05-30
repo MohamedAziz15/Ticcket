@@ -496,8 +496,8 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15/6/2022" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HZz-9R-Bf7">
-                                                <rect key="frame" x="254.33333333333334" y="116.33333333333334" width="84.333333333333343" height="21.666666666666657"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15/6" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HZz-9R-Bf7">
+                                                <rect key="frame" x="254.33333333333337" y="116.33333333333334" width="36" height="21.666666666666657"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                                 <color key="textColor" systemColor="linkColor"/>
                                                 <nil key="highlightedColor"/>
@@ -509,14 +509,14 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="18/6/2022" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4A3-IG-eq1">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="18/6" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4A3-IG-eq1">
                                                 <rect key="frame" x="251" y="154" width="91" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                                 <color key="textColor" systemColor="linkColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Orgnized by" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qvb-fK-9S7">
+                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Orgnized by" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qvb-fK-9S7">
                                                 <rect key="frame" x="24.000000000000007" y="195" width="101.66666666666669" height="23"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                                 <nil key="textColor"/>
@@ -590,9 +590,14 @@
                                                     <action selector="bookClicking:" destination="Gne-cv-VtB" eventType="touchUpInside" id="2j1-UH-ORN"/>
                                                 </connections>
                                             </button>
+                                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="SEk-Kh-rsY">
+                                                <rect key="frame" x="177.66666666666666" y="734" width="20" height="20"/>
+                                                <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </activityIndicatorView>
                                         </subviews>
                                         <color key="backgroundColor" red="0.93750704060000001" green="0.94183498200000004" blue="0.95481880610000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
+                                            <constraint firstItem="SEk-Kh-rsY" firstAttribute="centerX" secondItem="FXT-CS-aPr" secondAttribute="centerX" id="0hA-Rv-nia"/>
                                             <constraint firstItem="Axf-PA-18W" firstAttribute="top" secondItem="paC-VH-kCn" secondAttribute="bottom" constant="16" id="4yg-ND-R7R"/>
                                             <constraint firstItem="paC-VH-kCn" firstAttribute="leading" secondItem="IFe-XL-u4T" secondAttribute="trailing" constant="16" id="4zF-aS-7I4"/>
                                             <constraint firstItem="paC-VH-kCn" firstAttribute="top" secondItem="o4n-uv-BDU" secondAttribute="bottom" constant="32" id="5LM-Ej-egS"/>
@@ -621,6 +626,7 @@
                                             <constraint firstItem="xuY-4J-GAe" firstAttribute="leading" secondItem="1ea-17-Oz8" secondAttribute="leading" constant="16" id="brb-ck-zsY"/>
                                             <constraint firstItem="rFh-A0-Ejf" firstAttribute="centerY" secondItem="Qvb-fK-9S7" secondAttribute="centerY" id="chO-QN-GQz"/>
                                             <constraint firstAttribute="trailing" secondItem="yL0-gX-Eqz" secondAttribute="trailing" constant="16" id="duW-Hl-XCX"/>
+                                            <constraint firstItem="SEk-Kh-rsY" firstAttribute="centerY" secondItem="FXT-CS-aPr" secondAttribute="centerY" id="fzx-ma-IPL"/>
                                             <constraint firstItem="yL0-gX-Eqz" firstAttribute="leading" secondItem="1ea-17-Oz8" secondAttribute="leading" constant="24" id="g9J-Ms-0U2"/>
                                             <constraint firstItem="HZz-9R-Bf7" firstAttribute="leading" secondItem="paC-VH-kCn" secondAttribute="trailing" constant="8" id="giq-rW-sOr"/>
                                             <constraint firstItem="9VC-ZW-QXD" firstAttribute="top" secondItem="Qvb-fK-9S7" secondAttribute="bottom" constant="32" id="vtv-nB-ejS"/>
@@ -656,6 +662,7 @@
                         <outlet property="bookTicketBTN" destination="FXT-CS-aPr" id="BVD-Gf-RM1"/>
                         <outlet property="descriptionOfEventLbl" destination="yL0-gX-Eqz" id="F09-nz-XB0"/>
                         <outlet property="endDateOfEventLbl" destination="4A3-IG-eq1" id="vpi-55-ePx"/>
+                        <outlet property="indicator" destination="SEk-Kh-rsY" id="VFJ-Nq-IRf"/>
                         <outlet property="logoEventImg" destination="IFe-XL-u4T" id="oYh-gj-rIg"/>
                         <outlet property="nameOfEventLbl" destination="o4n-uv-BDU" id="clF-MM-iJp"/>
                         <outlet property="organizersLBL" destination="rFh-A0-Ejf" id="56r-1V-AAg"/>
