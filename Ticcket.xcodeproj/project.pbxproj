@@ -121,10 +121,10 @@
 		8F1BFF2B2843C16200666AC5 /* bookQRCodeBackend */ = {
 			isa = PBXGroup;
 			children = (
-				8F1BFF2F2843C18300666AC5 /* Event.swift */,
 				8F1BFF2E2843C18300666AC5 /* QRcodeBase.swift */,
 				8F1BFF2D2843C18300666AC5 /* QRCodeTicketData.swift */,
 				8F1BFF2C2843C18300666AC5 /* User.swift */,
+				8F1BFF2F2843C18300666AC5 /* Event.swift */,
 			);
 			path = bookQRCodeBackend;
 			sourceTree = "<group>";

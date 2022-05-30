@@ -43,6 +43,7 @@ class ScanQRVC: UIViewController, QRScannerViewDelegate {
             view.addSubview(qrScannerView)
             qrScannerView.configure(delegate: self, input: .init(isBlurEffectEnabled: true))
             qrScannerView.startRunning()
+            
         }
     
         private func showAlert() {
@@ -57,6 +58,10 @@ class ScanQRVC: UIViewController, QRScannerViewDelegate {
         }
     
         func qrScannerView(_ qrScannerView: QRScannerView, didSuccess code: String) {
+            print("-----------------------------------------------------------------")
+        //    print(qrScannerView.largeContentImage)
+            print("-----------------------------------------------------------------")
+
             let view = MessageView.viewFromNib(layout: .cardView)
             view.button?.isHidden = true
 

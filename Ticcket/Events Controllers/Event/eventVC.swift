@@ -26,6 +26,7 @@ class eventVC: UIViewController{
     var HomeEventDate : eventData?
 //    var HomeEventArr = [eventData]()
     var QRCodeArr = [QRCodeTicketData]()
+    var qrCode : QRCodeTicketData?
 
     
     
@@ -48,6 +49,19 @@ class eventVC: UIViewController{
         self.logoEventImg.kf.setImage(with: imageUrl)
         organizersLBL.isHidden=true
         
+       // print("yarab"+(qrCode?.url ?? ""))
+   //     print("yarab QR" + (qrCode?.url ?? "" ))
+        UserDefaults.standard.set(homeEvent?.id, forKey: "eventID")
+        print("-------------------------------------------------------------------")
+        print("eventID  \(UserDefaults.standard.string(forKey: "eventID")!)")
+        print("-------------------------------------------------------------------")
+
+//        print("QRCode"+(QrCodeResponse?.data?.url ?? ""))
+
+        //print("qr code "+(QRCodeArr[1].url ?? "")   )
+//        print("qr code "+(QRCodeArr[u].url ?? "")   )
+              
+              
     }
     
     
@@ -69,8 +83,17 @@ class eventVC: UIViewController{
                 print(value)
                 if (response.response?.statusCode ?? 0) >= 200 && (response.response?.statusCode ?? 0)<=300{
                       let QrCodeResponse  = Mapper<QRcodeBase>().map(JSONObject: value)
-                      self.QRCodeArr = QrCodeResponse?.data ?? []
-                 
+        //              print("QRCode"+(QrCodeResponse?.data?.url ?? ""))
+               //       self.qrCode?.url = QrCodeResponse?.data?.url
+                    //UserDefaults.standard.set(self.homeEvent?.id , forKey: "eventID")
+//                    self.QRCodeArr = QrCodeResponse?.data ?? []
+                    //  self.qrCode = QrCodeResponse?.data
+                  //  self.QRCodeArr = QrCodeResponse?.data ?? []
+                    
+                    
+                    
+                    
+                    
                 }else{
               //      let HomeError = Mapper<HomeErrorsBase>().map(JSONObject: value)
                 //    print(HomeError?.message ?? "")

@@ -41,6 +41,10 @@ class signUpInVc: UIViewController {
         //print("enter h step \(UserDefaults.standard.string(forKey: "authorization") ?? "")")
      //   print("enter hhhhhhh \(UserDefaults.standard.string(forKey: "token") ?? "")")
         print(" token here \(UserDefaults.standard.string(forKey: "token") ?? "")")
+        print("-----------------------------------------------")
+        print(" userID \(UserDefaults.standard.string(forKey: "userID") ?? "")")
+        print("-----------------------------------------------")
+
 
 
     }

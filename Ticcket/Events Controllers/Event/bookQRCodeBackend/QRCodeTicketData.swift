@@ -20,8 +20,8 @@ struct QRCodeTicketData : Mappable {
 	var token : String?
 	var id : Int?
 	var url : String?
-	var user : User?
-	var event : Event?
+	var user : [User]?
+	var event : [Event]?
 
 	init?(map: Map) {
 

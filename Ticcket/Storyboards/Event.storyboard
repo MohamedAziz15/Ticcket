@@ -169,8 +169,8 @@
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nyi-pt-ycz">
                                                                 <rect key="frame" x="16" y="60" width="343" height="64"/>
                                                                 <subviews>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="organizers name here" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c9i-kb-MU1">
-                                                                        <rect key="frame" x="8" y="0.0" width="327" height="64"/>
+                                                                    <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="organizers name here" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c9i-kb-MU1">
+                                                                        <rect key="frame" x="8" y="8" width="327" height="64"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                                         <textInputTraits key="textInputTraits"/>
                                                                     </textField>
@@ -208,7 +208,7 @@
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a4x-rm-tZ8">
                                                                 <rect key="frame" x="16" y="60" width="343" height="64"/>
                                                                 <subviews>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="15/6/2022" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ucL-0h-Ig9">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="2022-06-06" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ucL-0h-Ig9">
                                                                         <rect key="frame" x="8" y="0.0" width="327" height="64"/>
                                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                                                         <textInputTraits key="textInputTraits" textContentType="date-time"/>
@@ -246,7 +246,7 @@
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jIA-4k-Gq6">
                                                                 <rect key="frame" x="16" y="48" width="343" height="64"/>
                                                                 <subviews>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="16/6/2022" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B2I-VC-RcT">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="2022-06-09" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B2I-VC-RcT">
                                                                         <rect key="frame" x="8" y="0.0" width="327" height="64"/>
                                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                                                         <textInputTraits key="textInputTraits" textContentType="date-time"/>
@@ -382,8 +382,8 @@
                                                     <action selector="createEvent:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="4El-4s-aTW"/>
                                                 </connections>
                                             </button>
-                                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="EkG-iZ-oXe">
-                                                <rect key="frame" x="169" y="1117.6666666666667" width="37" height="37"/>
+                                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="EkG-iZ-oXe">
+                                                <rect key="frame" x="177.66666666666666" y="1126" width="20" height="20"/>
                                                 <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </activityIndicatorView>
                                         </subviews>
@@ -401,6 +401,7 @@
                                             <constraint firstAttribute="trailing" secondItem="RQS-Aw-d7q" secondAttribute="trailing" constant="64" id="ngK-os-FYZ"/>
                                             <constraint firstAttribute="trailing" secondItem="Jev-6E-qBJ" secondAttribute="trailing" id="qzr-YD-Cg7"/>
                                             <constraint firstItem="ca2-XC-FWY" firstAttribute="leading" secondItem="tfA-gK-rvV" secondAttribute="leading" constant="48" id="rZo-3M-XOE"/>
+                                            <constraint firstItem="RQS-Aw-d7q" firstAttribute="top" secondItem="Jev-6E-qBJ" secondAttribute="bottom" constant="-52" id="rg0-0Q-Gj4"/>
                                             <constraint firstItem="ca2-XC-FWY" firstAttribute="top" secondItem="tfA-gK-rvV" secondAttribute="top" id="taF-Lb-tiA"/>
                                             <constraint firstItem="EkG-iZ-oXe" firstAttribute="centerY" secondItem="RQS-Aw-d7q" secondAttribute="centerY" id="wAf-st-PfQ"/>
                                         </constraints>
@@ -433,6 +434,8 @@
                         <outlet property="AnnouncementsLBL" destination="3kE-4I-7nv" id="y6u-hk-H82"/>
                         <outlet property="EndAtLBL" destination="B2I-VC-RcT" id="K6s-CX-MO5"/>
                         <outlet property="TicketsLBL" destination="c9R-Q1-tvp" id="8Lm-6X-dsy"/>
+                        <outlet property="announcementsView" destination="RoJ-o2-G5I" id="Gzf-9c-0F5"/>
+                        <outlet property="border2View" destination="ixw-7p-0Rh" id="P2O-nr-RUN"/>
                         <outlet property="borderView1" destination="rfQ-kN-vQh" id="mGh-Pe-311"/>
                         <outlet property="chooseImgBTN" destination="9ZZ-fx-ObF" id="Cch-0o-kz4"/>
                         <outlet property="createEventBTN" destination="RQS-Aw-d7q" id="4vG-Gk-Bhn"/>
@@ -445,6 +448,7 @@
                         <outlet property="indicator" destination="EkG-iZ-oXe" id="qE0-Eu-yqv"/>
                         <outlet property="logoTF" destination="0QZ-9M-pFb" id="v1e-0r-w6g"/>
                         <outlet property="logoView" destination="ISl-Ws-1zo" id="l1S-un-Vra"/>
+                        <outlet property="organizersBigView" destination="210-Vv-cf4" id="TRN-GK-Svt"/>
                         <outlet property="organizersLBL" destination="c9i-kb-MU1" id="8b3-rr-SYE"/>
                         <outlet property="organizersview" destination="nyi-pt-ycz" id="7Ma-5k-wTa"/>
                         <outlet property="startAtView" destination="a4x-rm-tZ8" id="xTK-LW-zSg"/>
@@ -672,7 +676,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nfi-zk-fdX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2033" y="75"/>
+            <point key="canvasLocation" x="1831" y="75"/>
         </scene>
         <!--CodeVC-->
         <scene sceneID="2eM-uf-Zj7">
@@ -702,6 +706,9 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Save To Camera Roll"/>
+                                <connections>
+                                    <action selector="saveclicking:" destination="P9Q-Vr-FDN" eventType="touchUpInside" id="Y2e-kN-lqD"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7sj-3Q-wT1"/>
@@ -742,7 +749,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k2a-fE-PhI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2033" y="781"/>
+            <point key="canvasLocation" x="1831" y="780"/>
         </scene>
         <!--Scan View Controller-->
         <scene sceneID="hZz-2r-3os">

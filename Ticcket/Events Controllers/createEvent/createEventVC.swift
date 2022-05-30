@@ -10,6 +10,7 @@ import Alamofire
 import ObjectMapper
 import SwiftMessages
 
+
 class createEventVC: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
 
     @IBOutlet var logoTF: UITextField!
@@ -38,8 +39,12 @@ class createEventVC: UIViewController, UIImagePickerControllerDelegate & UINavig
     @IBOutlet var endAtView: UIView!
     
     
+    @IBOutlet var organizersBigView: UIView!
+    @IBOutlet var border2View: UIView!
+    @IBOutlet var announcementsView: UIView!
     
     
+
     
     
     override func viewDidLoad()
@@ -49,7 +54,7 @@ class createEventVC: UIViewController, UIImagePickerControllerDelegate & UINavig
         self.indicator.isHidden=true
         ticketsView.isHidden = true
         chooseImgBTN.layer.cornerRadius = 10.0
-        imageView.layer.cornerRadius = 10.0
+        imageView.layer.cornerRadius = 40.0
         borderView1.layer.isHidden=true
         logoView.layer.cornerRadius=10.0
         eventNameView.layer.cornerRadius=10.0
@@ -57,6 +62,13 @@ class createEventVC: UIViewController, UIImagePickerControllerDelegate & UINavig
         organizersview.layer.cornerRadius=10.0
         startAtView.layer.cornerRadius=10.0
         endAtView.layer.cornerRadius=10.0
+        organizersBigView.isHidden=true
+        border2View.isHidden=true
+        announcementsView.isHidden=true
+        print("------------------------------------------------------")
+        print(imageView.image ?? "")
+        print("------------------------------------------------------")
+
 
     }
     @IBAction func createEvent(_ sender: Any) {
@@ -82,6 +94,38 @@ class createEventVC: UIViewController, UIImagePickerControllerDelegate & UINavig
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage{
             imageView.image = image
+            
+            let image1 = UIImage.init(named: "myImage")
+            let imgData = image1!.jpegData(compressionQuality: 0.2)!
+
+            let parameters = ["logo": imageView.image] //Optional for extra parameter
+
+            AF.upload(multipartFormData: { multipartFormData in
+                    multipartFormData.append(imgData, withName: "fileset",fileName: "file.jpg", mimeType: "image/jpg")
+                    for (key, value) in parameters {
+                            multipartFormData.append(value.data(using: String.Encoding.utf8)!, withName: key)
+                        } //Optional for extra parameters
+                },
+            to:"mysite/upload.php")
+            { (result) in
+                switch result {
+                case .success(let upload,nil,nil):
+
+                    upload.uploadProgress(closure: { (progress) in
+                        print("Upload Progress: \(progress.fractionCompleted)")
+                    })
+
+                    upload.responseJSON { response in
+                         print(response.result.value)
+                    }
+
+                case .failure(let encodingError):
+                    print(encodingError)
+                }
+            }
+        
+            
+            
         }
         picker.dismiss(animated: true, completion:nil)
     }
@@ -90,28 +134,35 @@ class createEventVC: UIViewController, UIImagePickerControllerDelegate & UINavig
         picker.dismiss(animated: true, completion: nil)
     }
     
+    
+    
     func createEventApi(){
         self.indicator.isHidden=false
         self.indicator.startAnimating()
         createEventBTN.setTitle("", for: .normal)
-        let headers : HTTPHeaders = ["Accept-Language":"en","Accept":"application/json","Authorization":"Bearer \(UserDefaults.standard.string(forKey: "authorization") ?? "")"]
+        let headers : HTTPHeaders = ["Accept-Language":"en",
+                                     "Accept":"application/json",
+                                     "Authorization":"Bearer \(UserDefaults.standard.string(forKey: "token") ?? "")"]
         let params = ["title":self.eventNameLBL.text!,
                       "description":self.descriptionLBL.text!,
-                      "start_at":self.startDateLBL!,
-                      "end_at":self.EndAtLBL!,
-                      "logo":self.logoTF.text!] as [String : AnyObject]
+                      "start_at":self.startDateLBL.text!,
+                      "end_at":self.EndAtLBL.text!,
+                      "logo":self.imageView.image!] as [String : AnyObject]
 
         AF.request( "http://178.62.201.95/api/events", method: .post,parameters: params, headers: headers).responseJSON{response in
             self.indicator.stopAnimating()
             self.indicator.isHidden=true
-            self.createEventBTN.setTitle("create Event", for: .normal)
+            self.createEventBTN.setTitle("Create Event", for: .normal)
             print(response.response?.statusCode ?? "")
             switch response.result{
             case .success(let value):
                 print(value)
                 if (response.response?.statusCode ?? 0) >= 200 && (response.response?.statusCode ?? 0)<=300{
                     let createResponse  = Mapper<createBase>().map(JSONObject: value)
-                   print( createResponse?.message ?? "")
+                    print("message "+( createResponse?.message ?? ""))
+                    
+                    print(createResponse?.data ?? [])
+                    
                     // Instantiate a message view from the provided card view layout. SwiftMessages searches for nib
                     // files in the main bundle first, so you can easily copy them into your project and make changes.
                     let view = MessageView.viewFromNib(layout: .cardView)
