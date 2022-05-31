@@ -9,6 +9,8 @@ import UIKit
 import Alamofire
 import ObjectMapper
 import Kingfisher
+import Cosmos
+//import TinyConstraints
 
 class eventVC: UIViewController{
     
@@ -27,7 +29,19 @@ class eventVC: UIViewController{
 //    var HomeEventArr = [eventData]()
     var QRCodeArr = [QRCodeTicketData]()
     var qrCode : QRCodeTicketData?
-
+    @IBOutlet var ratingStackView: RatingController!
+    
+//    lazy var cosmosView:CosmosView = {
+//
+//        var view = CosmosView()
+//        view.settings.updateOnTouch=true
+//        view.settings.filledImage = UIImage(named: "star-2")?.withRenderingMode(.alwaysOriginal)
+//        view.settings.emptyImage = UIImage(named: "star-3")?.withRenderingMode(.alwaysOriginal)
+//
+//
+//        return view
+//    }()
+    
     
     
     override func viewDidLoad() {
@@ -49,11 +63,13 @@ class eventVC: UIViewController{
         self.logoEventImg.kf.setImage(with: imageUrl)
         organizersLBL.isHidden=true
         
+       // view.addSubview(cosmosView)
+        
        // print("yarab"+(qrCode?.url ?? ""))
    //     print("yarab QR" + (qrCode?.url ?? "" ))
         UserDefaults.standard.set(homeEvent?.id, forKey: "eventID")
         print("-------------------------------------------------------------------")
-        print("eventID  \(UserDefaults.standard.string(forKey: "eventID")!)")
+        //print("eventID  \(UserDefaults.standard.string(forKey: "eventID")!)")
         print("-------------------------------------------------------------------")
 
 //        print("QRCode"+(QrCodeResponse?.data?.url ?? ""))

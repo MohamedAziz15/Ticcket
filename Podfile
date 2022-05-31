@@ -15,5 +15,7 @@ target 'Ticcket' do
   pod 'ObjectMapper'
   pod 'SwiftMessages'
   pod 'SwiftQRScanner'
+  pod 'Cosmos'
+  pod 'TinyConstraints'
 
 end

@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (5.5.0)
+  - Cosmos (23.0.0)
   - IQKeyboardManagerSwift (6.5.9)
   - Kingfisher (7.1.2)
   - MercariQRScanner (1.9.0)
@@ -8,35 +9,42 @@ PODS:
     - SwiftMessages/App (= 9.0.6)
   - SwiftMessages/App (9.0.6)
   - SwiftQRScanner (0.1.0)
+  - TinyConstraints (4.0.2)
 
 DEPENDENCIES:
   - Alamofire
+  - Cosmos
   - IQKeyboardManagerSwift
   - Kingfisher
   - MercariQRScanner
   - ObjectMapper
   - SwiftMessages
   - SwiftQRScanner
+  - TinyConstraints
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - Cosmos
     - IQKeyboardManagerSwift
     - Kingfisher
     - MercariQRScanner
     - ObjectMapper
     - SwiftMessages
     - SwiftQRScanner
+    - TinyConstraints
 
 SPEC CHECKSUMS:
   Alamofire: 1c4fb5369c3fe93d2857c780d8bbe09f06f97e7c
+  Cosmos: b5c6a9a637e28a061b54c8f8b1d8529d7d4db73f
   IQKeyboardManagerSwift: 6e839c575c4aa1078d58a596e41244e77abe918f
   Kingfisher: 44ed6a8504763f27bab46163adfac83f5deb240c
   MercariQRScanner: e5aea873969af59b09b4cc411fc1c5b6293dba44
   ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
   SwiftMessages: f0c7ef4705a570ad6c5e208b611f4333e660ed92
   SwiftQRScanner: fba218bce4e5ac5de8ab6b72c6c7fefa09d29c5b
+  TinyConstraints: 7b7ccc0c485bb3bb47082138ff28bc33cd49897f
 
-PODFILE CHECKSUM: b8d1b75d08f309effc9d79f94f2be828bdaa1b23
+PODFILE CHECKSUM: ef3f4e949c42ec1931eacf835c7316ef815d9fca
 
 COCOAPODS: 1.11.2
