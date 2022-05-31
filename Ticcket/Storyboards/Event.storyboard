@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -401,7 +401,6 @@
                                             <constraint firstAttribute="trailing" secondItem="RQS-Aw-d7q" secondAttribute="trailing" constant="64" id="ngK-os-FYZ"/>
                                             <constraint firstAttribute="trailing" secondItem="Jev-6E-qBJ" secondAttribute="trailing" id="qzr-YD-Cg7"/>
                                             <constraint firstItem="ca2-XC-FWY" firstAttribute="leading" secondItem="tfA-gK-rvV" secondAttribute="leading" constant="48" id="rZo-3M-XOE"/>
-                                            <constraint firstItem="RQS-Aw-d7q" firstAttribute="top" secondItem="Jev-6E-qBJ" secondAttribute="bottom" constant="-52" id="rg0-0Q-Gj4"/>
                                             <constraint firstItem="ca2-XC-FWY" firstAttribute="top" secondItem="tfA-gK-rvV" secondAttribute="top" id="taF-Lb-tiA"/>
                                             <constraint firstItem="EkG-iZ-oXe" firstAttribute="centerY" secondItem="RQS-Aw-d7q" secondAttribute="centerY" id="wAf-st-PfQ"/>
                                         </constraints>
@@ -446,7 +445,7 @@
                         <outlet property="eventNameView" destination="axX-dI-s6B" id="Pow-yr-Y78"/>
                         <outlet property="imageView" destination="ca2-XC-FWY" id="hjD-Pg-S64"/>
                         <outlet property="indicator" destination="EkG-iZ-oXe" id="qE0-Eu-yqv"/>
-                        <outlet property="logoTF" destination="0QZ-9M-pFb" id="v1e-0r-w6g"/>
+                        <outlet property="logoUrlTF" destination="0QZ-9M-pFb" id="2zn-PU-fSX"/>
                         <outlet property="logoView" destination="ISl-Ws-1zo" id="l1S-un-Vra"/>
                         <outlet property="organizersBigView" destination="210-Vv-cf4" id="TRN-GK-Svt"/>
                         <outlet property="organizersLBL" destination="c9i-kb-MU1" id="8b3-rr-SYE"/>

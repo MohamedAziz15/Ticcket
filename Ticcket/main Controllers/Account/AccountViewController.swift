@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import MobileCoreServices
 
 class AccountViewController: UIViewController,UIImagePickerControllerDelegate & UINavigationControllerDelegate {
 
@@ -15,12 +16,12 @@ class AccountViewController: UIViewController,UIImagePickerControllerDelegate & 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        imageView.layer.cornerRadius = 20.0
+        imageView.layer.cornerRadius = 64.0
 
     }
     
     @IBAction func uploadClicking(_ sender: Any) {
-    
+        actionSheet()
 
 
     let imagePicker = UIImagePickerController()
@@ -35,13 +36,13 @@ class AccountViewController: UIViewController,UIImagePickerControllerDelegate & 
             present(imagePicker, animated: true, completion: nil)
         }
     }
-    
-           
-       
-
 func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
     if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage{
         imageView.image = image
+        
+        
+   
+        
     }
     picker.dismiss(animated: true, completion:nil)
 }
@@ -50,4 +51,40 @@ func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
     picker.dismiss(animated: true, completion: nil)
 }
 
+    func actionSheet(){
+        
+        let alert = UIAlertController(title: "choose Image", message: nil, preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: "Open Camera", style: .default, handler: {
+            (handler) in self.openCamera()
+        }))
+        alert.addAction(UIAlertAction(title: "Gallery", style: .default, handler: {
+            (handler) in self.openGallery()
+        }))
+        alert.addAction(UIAlertAction(title: "cancel", style: .default, handler: {
+            (handler) in
+        }))
+        self.present(alert, animated: true,completion: nil)
+        
+    }
+    func openCamera(){
+        let image = UIImagePickerController()
+        image.allowsEditing=true
+        image.sourceType = .camera
+        image.mediaTypes = [kUTTypeImage as String]
+        self.present(image, animated: true,completion: nil)
+    }
+    
+    func openGallery(){
+        if  UIImagePickerController.isSourceTypeAvailable(.photoLibrary){
+                let image = UIImagePickerController()
+                image.allowsEditing=true
+                image.delegate = self
+                self.present(image, animated: true,completion: nil)
+        }
+        
+        
+        
+        
+    }
+    
 }
